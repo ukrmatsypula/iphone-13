@@ -3,6 +3,7 @@
   const tabsTitle = document.querySelector(".card-details__title");
   const tabsPrice = document.querySelector(".card-details__price");
   const tabsImg = document.querySelector(".card__image_item");
+  const htmlTagTitle = document.getElementsByTagName("title")[0];
 
   const tabsOptions = [
     {
@@ -27,6 +28,7 @@
 
   const changeContent = (index) => {
     tabsTitle.textContent = `Смартфон Apple iPhone 13 Pro ${tabsOptions[index].memory} ${tabsOptions[index].name}`;
+    htmlTagTitle.textContent = tabsTitle.textContent;
     tabsPrice.textContent = `${tabsOptions[index].price}₽`;
     tabsImg.src = tabsOptions[index].img;
   };
